@@ -9,7 +9,7 @@
 body {
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
-  --light-grey: hsl(217, 12%, 63%);
+  --light-grey: hsla(217, 12%, 63%, 0.85);
   --medium-grey: hsla(216, 12%, 54%, 0.1);
   --dark-blue: hsla(213, 20%, 18%, 0.5);
   --very-dark-blue: hsl(216, 12%, 8%);
@@ -31,4 +31,83 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/******************/
+
+.box{
+  max-width: 28rem;
+  width: 90%;
+  background-color: var(--dark-blue);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+.star{
+  background-color: var(--medium-grey);
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.circle{
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
+  font-weight: 700;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle:hover{
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.active{
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.textWrapper h1{
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.textWrapper p{
+  color: var(--light-grey);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.rating{
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.btn{
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: var(--white);
+  color: var(--orange);
 }
