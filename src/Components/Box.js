@@ -3,6 +3,14 @@ import styles from "./Box.module.css";
 import iconStar from "../images/icon-star.svg";
 
 const Box = () => {
+  const [active, setActive] = React.useState("active");
+
+  function handleClick(e) {
+    e.preventDefault();
+    e.target.classList += ` ${active}`;
+    console.log(e.target);
+  }
+
   return (
     <div className={styles.box}>
       <div className={styles.circle}>
@@ -17,7 +25,9 @@ const Box = () => {
       </div>
       <div>
         <ul className={styles.rating}>
-          <li className={styles.circle}>1</li>
+          <li className={styles.circle} onClick={handleClick}>
+            1
+          </li>
           <li className={styles.circle}>2</li>
           <li className={styles.circle}>3</li>
           <li className={styles.circle}>4</li>
