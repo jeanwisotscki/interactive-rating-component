@@ -4,8 +4,7 @@ import Box from "./Components/Box";
 
 const App = () => {
   return (
-    <div>
-      <h1>oi teste</h1>
+    <div className="App">
       <Box />
     </div>
   );

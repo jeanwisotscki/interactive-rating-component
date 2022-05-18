@@ -7,16 +7,28 @@
 }
 
 body {
-  font-family: "Overpass", sans-serif;
   --orange: hsl(25, 97%, 53%);
   --white: hsl(0, 0%, 100%);
   --light-grey: hsl(217, 12%, 63%);
-  --medium-grey: hsl(216, 12%, 54%);
-  --dark-blue: hsl(213, 19%, 18%);
+  --medium-grey: hsla(216, 12%, 54%, 0.1);
+  --dark-blue: hsla(213, 20%, 18%, 0.5);
   --very-dark-blue: hsl(216, 12%, 8%);
+  background-color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
 }
 
 img{
   display: block;
   max-width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,3 +1,52 @@
-.teste{
-  color: red;
+
+.box{
+  max-width: 28rem;
+  width: 90%;
+  background-color: var(--dark-blue);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.circle{
+  background-color: var(--medium-grey);
+  color: var(--light-grey);
+  font-weight: 700;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.textWrapper h1{
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.textWrapper p{
+  color: var(--light-grey);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.rating{
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.btn{
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
 }
