@@ -1,23 +1,23 @@
 import React from "react";
 import "./App.css";
-import iconStar from "./images/icon-star.svg";
+import imgStar from "./images/icon-star.svg";
+import imgThankYou from "./images/illustration-thank-you.svg";
 
 const App = () => {
   const rating = document.querySelectorAll(".rating li");
-  const [valor, setValor] = React.useState("");
+  const [ratingValue, setRatingValue] = React.useState(0);
   const [isSubmited, setIsSubmited] = React.useState(false);
 
   function handleClick(e) {
     rating.forEach((li) => {
       li.classList.remove("active");
     });
-
     e.target.classList.add("active");
-    setValor(e.target.value);
+
+    setRatingValue(e.target.value);
   }
 
   function handleSubmit() {
-    console.log(valor);
     setIsSubmited(true);
   }
 
@@ -26,7 +26,7 @@ const App = () => {
       {!isSubmited && (
         <div className="box">
           <div className="star">
-            <img src={iconStar} alt="icon star" />
+            <img src={imgStar} alt="icon star" />
           </div>
           <div className="textWrapper">
             <h1>How did we do?</h1>
@@ -60,15 +60,32 @@ const App = () => {
         </div>
       )}
 
-      {isSubmited && <ThankYou setIsSubmited={setIsSubmited} />}
+      {isSubmited && (
+        <ThankYou setIsSubmited={setIsSubmited} ratingValue={ratingValue} />
+      )}
     </div>
   );
 };
 
-const ThankYou = ({ setIsSubmited }) => {
+const ThankYou = ({ setIsSubmited, ratingValue }) => {
   return (
     <div>
-      <button onClick={() => setIsSubmited(false)}>GO BACK</button>
+      <div className="box">
+        <div className="imgThanks">
+          <img src={imgThankYou} alt="illustration" />
+        </div>
+        <p className="ratingValue">You selected {ratingValue} out of 5</p>
+        <div className="textWrapper">
+          <h1>Thank you!</h1>
+          <p style={{ marginBottom: ".5rem" }}>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support. don't hesitate to get in touch!
+          </p>
+        </div>
+        <button onClick={() => setIsSubmited(false)} className="btn">
+          GO BACK
+        </button>
+      </div>
     </div>
   );
 };

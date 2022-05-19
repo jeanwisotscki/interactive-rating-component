@@ -33,14 +33,13 @@ li{
   justify-content: center;
 }
 
-/******************/
-
 .box{
-  max-width: 28rem;
-  width: 90%;
+  width: 28rem;
+  height: 28rem;
   background-color: var(--dark-blue);
   padding: 2rem;
   border-radius: 2rem;
+  text-align: center;
 }
 .star{
   background-color: var(--medium-grey);
@@ -110,4 +109,21 @@ li{
 .btn:hover{
   background-color: var(--white);
   color: var(--orange);
+}
+
+/* Thank You
+********************************/
+.imgThanks{
+  display: flex;
+  justify-content: center;
+}
+
+.ratingValue{
+  color: var(--orange);
+  background-color: var(--medium-grey);
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  padding: .5rem 1.3rem;
+  border-radius: 2rem;
 }
