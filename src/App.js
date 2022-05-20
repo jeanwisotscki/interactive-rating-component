@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import imgStar from "./images/icon-star.svg";
-import imgThankYou from "./images/illustration-thank-you.svg";
+import imgStar from "./assets/icon-star.svg";
+import imgThankYou from "./assets/illustration-thank-you.svg";
 
 const App = () => {
   const rating = document.querySelectorAll(".rating li");
