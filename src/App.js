@@ -4,12 +4,12 @@ import imgStar from "./assets/icon-star.svg";
 import imgThankYou from "./assets/illustration-thank-you.svg";
 
 const App = () => {
-  const rating = document.querySelectorAll(".rating li");
+  const ratingElements = document.querySelectorAll(".rating li");
   const [ratingValue, setRatingValue] = React.useState(0);
   const [isSubmited, setIsSubmited] = React.useState(false);
 
   function handleClick(e) {
-    rating.forEach((li) => {
+    ratingElements.forEach((li) => {
       li.classList.remove("active");
     });
     e.target.classList.add("active");
